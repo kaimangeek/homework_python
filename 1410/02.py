@@ -28,14 +28,14 @@ def count_words(words_list):
 
 
 def top_10(words_dict):
-    print('The top-10 words:')
+    print('Top:')
     items = words_dict.items()
     items = sorted(items, key=lambda x: x[1], reverse=True)
     for word, counter in items[:10]:
         print(word, ': ', counter)
 
 
-file = open("2.txt", "r")
+file = open("text.txt", "r")
 s = file.read()
 ct = clean_text(s.split())
 top_10(count_words(ct))
